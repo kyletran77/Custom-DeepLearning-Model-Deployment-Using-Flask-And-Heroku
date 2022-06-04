@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "templates",
+			"path": "../../Downloads/Custom-DeepLearning-Model-Deployment-Using-Flask-And-Heroku-master/templates"
+		},
+		{
+			"name": "ResumeCheck",
+			"path": "."
+		},
+		{
+			"name": "uploads",
+			"path": "../../Downloads/Custom-DeepLearning-Model-Deployment-Using-Flask-And-Heroku-master/uploads"
+		},
+		{
+			"name": "static",
+			"path": "../../Downloads/Custom-DeepLearning-Model-Deployment-Using-Flask-And-Heroku-master/static"
+		}
+	],
+	"settings": {}
+}
