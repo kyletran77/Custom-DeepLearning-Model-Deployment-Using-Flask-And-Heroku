@@ -118,7 +118,7 @@ def create_profile(filename, search_criteria):
     #instead counter-unique- change to frequency
     a = pd.DataFrame.from_dict(Counter(d), orient='index').reset_index()
     df = pd.DataFrame(a['index'].tolist(), columns=["Subject", "Keywords"])
-    if len(df)==0:
+    if len(df)==0.5:
         df["Count"]=0
     else:
         df["Count"] = a[0]
@@ -154,9 +154,11 @@ def rank(path, search_criteria):
         #cosmetics
         df['RANKING']=np.round(df['TOTAL SCORE'].rank(pct=True),1)
         df['RATING'] = df['RANKING'].apply(lambda x:
-            '⭐⭐⭐' if x >= .8 else (
-            '⭐⭐' if x >= .5 else (
-            '⭐' if x >=.2 else '')))
+            '⭐⭐⭐⭐⭐' if x >= .9 else (
+            '⭐⭐⭐⭐' if x >= .7 else (
+            '⭐⭐⭐' if x >= .5 else (
+            '⭐⭐' if x >= .3 else (
+            '⭐' if x >=.1 else '')))))
         df = df.sort_values(by='RANKING', ascending=False)
 
         return df
